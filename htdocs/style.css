@@ -50,3 +50,150 @@ body {
     color: #fff;
     border-bottom-color: #fff;
 }
+
+.skill-card {
+    width: 300px;
+    padding: 20px;
+    background: #212529;
+    border: 6px solid #fff;
+    box-shadow: 12px 12px 0 #fff;
+    color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 17px 17px 0 #fff;
+}
+
+/* Title */
+.skill-card__title {
+    font-size: 28px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: block;
+    position: relative;
+}
+
+.skill-card__title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+
+    transition: width 0.35s ease;
+}
+
+
+.skill-card:hover .skill-card__title::after {
+    width: 100%;
+}
+
+
+/* Skill list */
+.skill-card__list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.skill-card__list li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-left: 18px;
+    position: relative;
+}
+
+/* Bullet point */
+.skill-card__list li::before {
+    position: absolute;
+    left: 0;
+    color: #fff;
+    font-size: 20px;
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-card .btn {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .btn {
+    transform: translateY(-2px);
+}
+
+#contact .form-control {
+    background-color: #212529;
+    color: #fff;
+    border: 1px solid #6c757d;
+}
+
+#contact .form-control::placeholder {
+    color: #adb5bd;
+}
+
+#contact .form-control:focus {
+    border-color: #fff;
+    box-shadow: none;
+}
+
+.typewriter {
+    display: inline-block;
+}
+
+.typewriter-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+
+    font-size: 2.2rem;
+    font-weight: 700;
+
+    background: linear-gradient(90deg, #a855f7, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-sizing: content-box;
+    padding-right: 0.3em;
+    border-right: 3px solid #fff;
+    width: 0;
+    animation:
+        typing 2.6s steps(14, end) forwards,
+        blink 0.7s step-end infinite;
+}
+
+/* Animations */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
